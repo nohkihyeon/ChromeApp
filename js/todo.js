@@ -11,6 +11,8 @@ function saveToDos() {
 function deleteTodo(event) {
     const li = event.target.parentElement;
     li.remove();
+    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+    saveToDos();
 }
 
 function paintTodo(newTodo) {
@@ -46,5 +48,5 @@ const savedToDos = localStorage.getItem(TODOS_KEY);
 if(savedToDos != null) {
     const parsedToDos = JSON.parse(savedToDos);
     toDos === parsedToDos;
-    parentToDos.forEach(paintTodo);
+    parsedToDos.forEach(paintTodo);
 }
