@@ -1,1 +1,6 @@
 # ChromeApp
+
+- CLOCK
+- QUOTES AND BACKGROUND
+- TO DO LIST
+- WEATHER
